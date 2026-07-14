@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - แนะนำตัวสำหรับยื่นพอร์ต ม.6</title>
+    <!-- นำเข้า Google Fonts เพื่อความสวยงาม -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS สำหรับตกแต่งเว็บไซต์ */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Sarabun', sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* ส่วนหัวข้อเว็บ (Header & Navigation) */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        nav {
+            background-color: #1a305c;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffeb3b;
+        }
+
+        /* ส่วนเนื้อหาหลัก (Container) */
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* การจัดแต่งแต่ละ Section */
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        section h2 {
+            color: #1e3c72;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* 1. ประวัติส่วนตัว */
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1e3c72;
+        }
+
+        .profile-info table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .profile-info td {
+            padding: 8px 12px;
+            vertical-align: top;
+        }
+
+        .profile-info td:first-child {
+            font-weight: bold;
+            color: #1e3c72;
+            width: 120px;
+        }
+
+        /* 2-4. จัดสไตล์กล่องผลงาน, จิตอาสา, เกียรติบัตร */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #ddd; /* สีพื้นหลังกรณีไม่มีรูป */
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #2a5298;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* ส่วนท้ายเว็บ */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a305c;
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 50px;
+        }
+
+        /* ปรับแต่งสำหรับมือถือ */
+        @media (max-width: 600px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .profile-info td {
+                display: block;
+                width: 100% !important;
+                text-align: center;
+            }
+            .profile-info td:first-child {
+                padding-bottom: 2px;
+            }
+            nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ส่วนหัวข้อ -->
+    <header>
+        <h1>PORTFOLIO</h1>
+        <p>แฟ้มสะสมผลงานอิเล็กทรอนิกส์</p>
+    </header>
+
+    <!-- เมนูนำทางแบบปักหมุด (Sticky Nav) -->
+    <nav>
+        <a href="#about">ประวัติส่วนตัว</a>
+        <a href="#works">ผลงาน</a>
+        <a href="#volunteer">จิตอาสา</a>
+        <a href="#certificates">เกียรติบัตร</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- 1. ประวัติส่วนตัว -->
+        <section id="about">
+            <h2>1. ประวัติส่วนตัว (Profile)</h2>
+            <div class="profile-container">
+                <!-- เปลี่ยน "profile.jpg" เป็นรูปของตัวเอง -->
+                <img src="https://via.placeholder.com/180" alt="รูปโปรไฟล์" class="profile-img">
+                <div class="profile-info">
+                    <table>
+                        <tr>
+                            <td>ชื่อ-นามสกุล:</td>
+                            <td>นาย/นางสาว มุ่งมั่น เรียนดี (น้องสามารถแก้ไขชื่อตรงนี้ได้เลย)</td>
+                        </tr>
+                        <tr>
+                            <td>ชื่อเล่น:</td>
+                            <td>ดีดี</td>
+                        </tr>
+                        <tr>
+                            <td>การศึกษา:</td>
+                            <td>ชั้นมัธยมศึกษาปีที่ 6 โรงเรียนเรียนดีวิทยา (แผนการเรียน วิทย์-คณิต)</td>
+                        </tr>
+                        <tr>
+                            <td>อีเมล:</td>
+                            <td>myemail@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>ความสามารถ:</td>
+                            <td>เขียนโปรแกรมเบื้องต้น, ตัดต่อวิดีโอ, ทำงานเป็นทีม</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ผลงาน -->
+        <section id="works">
+            <h2>2. ผลงาน (Projects & Works)</h2>
+            <div class="grid-container">
+                <!-- การ์ดผลงานที่ 1 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" alt="ผลงาน 1" class="card-img">
+                    <div class="card-content">
+                        <div class="card-title">โครงงานวิทยาศาสตร์ระดับโรงเรียน</div>
+                        <div class="card-desc">พัฒนาเครื่องวัดความชื้นในดินอัตโนมัติโดยใช้บอร์ด Arduino และนำเสนอในงานวิชาการของโรงเรียน</div>
+                    </div>
+                </div>
+                <!-- การ์ดผลงานที่ 2 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" alt="ผลงาน 2" class="card-img">
+                    <div class="card-content">
+                        <div class="card-title">ผู้พัฒนาเว็บไซต์ของชมรม</div>
+                        <div class="card-desc">ออกแบบและพัฒนาหน้าเว็บไซต์ประชาสัมพันธ์ให้กับชมรมคอมพิวเตอร์ของโรงเรียน</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. จิตอาสา -->
+        <section id="volunteer">
+            <h2>3. จิตอาสา (Volunteering)</h2>
+            <div class="grid-container">
+                <!-- การ์ดจิตอาสาที่ 1 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" alt="จิตอาสา 1" class="card-img">
+                    <div class="card-content">
+                        <div class="card-title">กิจกรรมค่ายสอนน้องคอมพิวเตอร์</div>
+                        <div class="card-desc">เป็นวิทยากรช่วยสอนการใช้งานคอมพิวเตอร์เบื้องต้นให้กับน้องๆ โรงเรียนในชุมชนห่างไกล</div>
+                    </div>
+                </div>
+                <!-- การ์ดจิตอาสาที่ 2 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" alt="จิตอาสา 2" class="card-img">
+                    <div class="card-content">
+                        <div class="card-title">จิตอาสาทำความสะอาดโรงเรียน</div>
+                        <div class="card-desc">เข้าร่วมกิจกรรม Big Cleaning Day ปรับปรุงภูมิทัศน์และทาสีสนามเด็กเล่นโรงเรียน</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. เกียรติบัตร -->
+        <section id="certificates">
+            <h2>4. เกียรติบัตร (Certificates)</h2>
+            <div class="grid-container">
+                <!-- เกียรติบัตรที่ 1 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" alt="เกียรติบัตร 1" class="card-img">
+                    <div class="card-content">
+                        <div class="card-title">รางวัลชนะเลิศการแข่งขันทักษะคอมพิวเตอร์</div>
+                        <div class="card-desc">ได้รับรางวัลระดับเหรียญทองเนื่องในการแข่งขันศิลปหัตถกรรมนักเรียน ครั้งที่ 71</div>
+                    </div>
+                </div>
+                <!-- เกียรติบัตรที่ 2 -->
+                <div class="card">
+                    <img src="https://via.placeholder.com/300x180" alt="เกียรติบัตร 2" class="card-img">
+                    <div class="card-content">
+                        <div class="card-title">เกียรติบัตรผ่านการอบรม Python</div>
+                        <div class="card-desc">ผ่านการอบรมหลักสูตรการเขียนโปรแกรมด้วยภาษา Python เบื้องต้นจากมหาวิทยาลัยชื่อดัง</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ส่วนท้าย -->
+    <footer>
+        <p>&copy; 2026 - จัดทำโดย นาย/นางสาว มุ่งมั่น เรียนดี ม.6</p>
+    </footer>
+
+</body>
+</html>
