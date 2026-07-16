@@ -3,65 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าแรก - แฟ้มสะสมผลงาน</title>
+    <title>หน้าแรก - ยินดีต้อนรับสู่เว็บไซต์ Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&family=Kanit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
-        .menu-container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 500px;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-        a:hover {
-            color: #2980b9;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
 
-    <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+        }
 
-    <div class="menu-container">
-        <ol>
-            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-            <li><a href="education.html">ประวัติการศึกษา</a></li>
-            <li><a href="works.html">ผลงานและกิจกรรม</a></li>
-            <li><a href="skills.html">ความสามารถและทักษะ</a></li>
-            <li><a href="awards.html">เกียรติบัตรและรางวัล</a></li>
-            <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
-        </ol>
-    </div>
+        /* ส่วนของแบนเนอร์ด้านบน (Hero Banner) */
+        .banner {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: #ffffff;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
 
-</body>
-</html>
+        .banner h1 {
+            font-family: 'Kanit', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .banner p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* ส่วนเนื้อหาหลัก (Main Content) */
+        .container {
+            max-width: 1000px;
+            margin: -40px auto 40px auto; /* ดันเนื้อหาขึ้นไปทับแบนเนอร์เล็กน้อยให้มีมิติ */
+            padding: 0 20px;
+        }
+
+        /* การ์ดโปรไฟล์ */
+        .profile-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        /* กรอบรูปนักเรียน */
+        .profile-img-wrapper {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid #ffffff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-card h2 {
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.8rem;
+            color: #0f172a;
+            margin-bottom: 5px;
+        }
+
+        .profile-card .student-info {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        /* คติประจำใจ */
+        .motto-box {
+            background: #f1f5f9;
+            border-left: 4px solid #3b82f6;
+            padding: 15px;
+            display: inline-block;
+            max-width: 600px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 10px;
+        }
+
+        .motto-box p {
+            font-style: italic;
+            color: #334155;
+            font-size: 1.05rem;
+        }
+
+        /* ส่วนของเมนูปุ่มกดเข้าสู่หน้าต่าง ๆ */
+        .menu-title {
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.4rem;
+            color: #1
