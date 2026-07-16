@@ -113,4 +113,162 @@
         .menu-title {
             font-family: 'Kanit', sans-serif;
             font-size: 1.4rem;
-            color: #1
+            color: #1e293b;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .menu-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #3b82f6;
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        /* สไตล์ของปุ่มลิงก์ */
+        .menu-btn {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            color: #1e293b;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .menu-btn i {
+            font-size: 1.5rem;
+            color: #3b82f6;
+            margin-right: 20px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .menu-btn-text h3 {
+            font-family: 'Kanit', sans-serif;
+            font-size: 1.1rem;
+            margin-bottom: 2px;
+        }
+
+        .menu-btn-text p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        /* เอฟเฟกต์ตอนเอาเมาส์ไปชี้ปุ่ม (Hover) */
+        .menu-btn:hover {
+            transform: translateY(-5px);
+            background: #3b82f6;
+            color: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+        }
+
+        .menu-btn:hover i {
+            color: #ffffff;
+        }
+
+        .menu-btn:hover .menu-btn-text p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* รองรับการแสดงผลบนมือถือ */
+        @media (max-width: 600px) {
+            .banner h1 { font-size: 2rem; }
+            .container { margin-top: -20px; }
+            .profile-card { padding: 30px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner">
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ Portfolio</h1>
+        <p>แฟ้มสะสมผลงานออนไลน์เพื่อการเรียนรู้และการพัฒนาตนเอง</p>
+    </div>
+
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-img-wrapper">
+                <img src="https://via.placeholder.com/180" alt="รูปภาพนักเรียน">
+            </div>
+            
+            <h2>นายสมมติ นามสมมติ</h2>
+            
+            <p class="student-info">ชั้นมัธยมศึกษาปีที่ 6/1 | โรงเรียนวิทยาศาสตร์ศึกษา</p>
+            
+            <div class="motto-box">
+                <p>"ความพยายามในวันนี้ คือความสำเร็จที่งดงามในวันข้างหน้า"</p>
+            </div>
+        </div>
+
+        <h2 class="menu-title">เลือกหัวข้อเพื่อเข้าชมข้อมูล</h2>
+
+        <div class="menu-grid">
+            
+            <a href="profile.html" class="menu-btn">
+                <i class="fa-solid fa-user"></i>
+                <div class="menu-btn-text">
+                    <h3>1. ประวัติส่วนตัว</h3>
+                    <p>ข้อมูลทั่วไป วันเกิด และเป้าหมายในอนาคต</p>
+                </div>
+            </a>
+
+            <a href="education.html" class="menu-btn">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <div class="menu-btn-text">
+                    <h3>2. ประวัติการศึกษา</h3>
+                    <p>ประวัติการเรียนตั้งแต่ระดับประถมถึงมัธยม</p>
+                </div>
+            </a>
+
+            <a href="works.html" class="menu-btn">
+                <i class="fa-solid fa-palette"></i>
+                <div class="menu-btn-text">
+                    <h3>3. ผลงานและกิจกรรม</h3>
+                    <p>กิจกรรมค่าย จิตอาสา และโครงงานที่เข้าร่วม</p>
+                </div>
+            </a>
+
+            <a href="skills.html" class="menu-btn">
+                <i class="fa-solid fa-star"></i>
+                <div class="menu-btn-text">
+                    <h3>4. ความสามารถและทักษะ</h3>
+                    <p>ทักษะคอมพิวเตอร์ ภาษา และ Soft Skills</p>
+                </div>
+            </a>
+
+            <a href="awards.html" class="menu-btn">
+                <i class="fa-solid fa-trophy"></i>
+                <div class="menu-btn-text">
+                    <h3>5. เกียรติบัตรและรางวัล</h3>
+                    <p>รางวัลจากการแข่งขันและเกียรติบัตรเรียนดี</p>
+                </div>
+            </a>
+
+            <a href="contact.html" class="menu-btn">
+                <i class="fa-solid fa-address-book"></i>
+                <div class="menu-btn-text">
+                    <h3>6. ช่องทางการติดต่อ</h3>
+                    <p>เบอร์โทรศัพท์ อีเมล และโซเชียลมีเดีย</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
