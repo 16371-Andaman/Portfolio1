@@ -3,102 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - หน้าแรก</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>หน้าแรก - แฟ้มสะสมผลงาน</title>
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Sarabun', sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; display: flex; flex-direction: column; min-height: 100vh; }
-        
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; font-weight: 300; }
-
-        /* เมนูหลักกลางหน้าจอ */
-        .menu-container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            flex: 1; /* ดึง footer ให้ลงไปข้างล่าง */
-        }
-
-        .menu-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
-            text-decoration: none;
-            color: #1e3c72;
-            font-weight: 600;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            min-height: 100vh;
         }
-
-        .menu-card:hover {
-            transform: translateY(-8px);
-            border-color: #2a5298;
-            box-shadow: 0 8px 25px rgba(30, 60, 114, 0.15);
-            background-color: #fcfdfe;
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
         }
-
-        .menu-icon {
-            font-size: 3rem;
+        .menu-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
             margin-bottom: 15px;
+            font-size: 18px;
         }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #1a305c;
-            color: white;
-            font-size: 0.9rem;
-            margin-top: 40px;
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>WELCOME TO PORTFOLIO</h1>
-        <p>ยินดีต้อนรับสู่แฟ้มสะสมผลงาน ม.6</p>
-    </header>
+    <h1>ยินดีต้อนรับสู่ Portfolio ของฉัน</h1>
 
-    <!-- ปุ่มกดแยกไปหน้าต่างๆ -->
     <div class="menu-container">
-        <a href="about.html" class="menu-card">
-            <span class="menu-icon">👤</span>
-            <span>1. ประวัติส่วนตัว</span>
-        </a>
-        <a href="works.html" class="menu-card">
-            <span class="menu-icon">💻</span>
-            <span>2. ผลงาน</span>
-        </a>
-        <a href="volunteer.html" class="menu-card">
-            <span class="menu-icon">🤝</span>
-            <span>3. จิตอาสา</span>
-        </a>
-        <a href="certificates.html" class="menu-card">
-            <span class="menu-icon">🏆</span>
-            <span>4. เกียรติบัตร</span>
-        </a>
+        <ol>
+            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+            <li><a href="education.html">ประวัติการศึกษา</a></li>
+            <li><a href="works.html">ผลงานและกิจกรรม</a></li>
+            <li><a href="skills.html">ความสามารถและทักษะ</a></li>
+            <li><a href="awards.html">เกียรติบัตรและรางวัล</a></li>
+            <li><a href="contact.html">ช่องทางการติดต่อ</a></li>
+        </ol>
     </div>
-
-    <footer>
-        <p>&copy; 2026 - จัดทำโดย นักเรียน ม.6</p>
-    </footer>
 
 </body>
 </html>
